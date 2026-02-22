@@ -1,0 +1,16 @@
+attachment_id,filename,size_bytes,received_timestamp_utc,source_location,owner,retention_class
+spec_001_umbrella.md,spec_001_umbrella.md,TBD,TBD,TBD,TBD,corporate_7y_policy
+spec_001_a_compliance.md,spec_001_a_compliance.md,TBD,TBD,TBD,TBD,corporate_7y_policy
+spec_001_b_data_integrity.md,spec_001_b_data_integrity.md,TBD,TBD,TBD,TBD,corporate_7y_policy
+spec_001_c_automation_bridge.md,spec_001_c_automation_bridge.md,TBD,TBD,TBD,TBD,corporate_7y_policy
+build_sheet_spec_001_d.md,build_sheet_spec_001_d.md,TBD,TBD,TBD,TBD,corporate_7y_policy
+spec-corrections.md,spec-corrections.md,TBD,TBD,TBD,TBD,corporate_7y_policy
+kb-admin_v2026-02-22.md.docx,kb-admin_v2026-02-22.md.docx,TBD,TBD,TBD,TBD,corporate_7y_policy
+release-notes_v2026-02-22.md.docx,release-notes_v2026-02-22.md.docx,TBD,TBD,TBD,TBD,corporate_7y_policy
+KB_Audit_Resolution_Summary.docx,KB_Audit_Resolution_Summary.docx,TBD,TBD,TBD,TBD,corporate_7y_policy
+kbfiles.zip,kbfiles.zip,TBD,TBD,TBD,TBD,corporate_7y_policy
+files.zip,files.zip,TBD,TBD,TBD,TBD,corporate_7y_policy
+early.zip,early.zip,TBD,TBD,TBD,TBD,corporate_7y_policy
+operations.zip,operations.zip,TBD,TBD,TBD,TBD,TBD
+profiles.zip,profiles.zip,TBD,TBD,TBD,TBD,TBD
+analysis.zip,analysis.zip,TBD,TBD,TBD,TBD,TBD
