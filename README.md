@@ -1,4 +1,4 @@
-# Town KB / Second Brain — Coherent Bundle (Split into 2 ZIP Parts)
+# Town KB / Second Brain
 
 **Bundle date:** 2026-02-22  
 **Generated at (UTC):** 2026-02-22T05:07:03Z
