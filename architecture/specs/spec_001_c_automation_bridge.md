@@ -43,7 +43,7 @@ This track intentionally uses **Tenzo as the ETL/reporting layer** (rather than 
 
 - **Daily operational summary (restricted)**
   - Post a concise daily message into Google Chat `#daily-ops` **restricted to management only**.
-  - Send a matching email summary to **management@town.restaurant** (GM, Ops Director, Finance Lead included).
+  - Send a matching email summary to **management@example.com** (GM, Ops Director, Finance Lead included).
 
 - **Google Chat Space: #daily-ops**
   - **Membership (locked):**

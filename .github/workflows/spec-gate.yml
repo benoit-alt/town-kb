@@ -13,7 +13,7 @@ permissions:
 
 jobs:
   validate-specs:
-    name: Validate spec structure
+    name: validate-specs
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

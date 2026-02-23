@@ -14,16 +14,16 @@ To enforce quality standards, configure GitHub branch protection on `main` with 
 
 These checks run on every push and pull request:
 
-- **kb-validation / markdownlint** — Validates markdown formatting (line length, heading structure, lists, etc.)
-- **kb-validation / frontmatter-schema** — Validates YAML frontmatter against path-aware JSON schemas
-- **kb-validation / pii-lint** — Advisory scan for PII patterns (emails, phones) in markdown
-- **kb-validation / link-check** — Validates relative links point to existing files
+- **markdownlint** — Validates markdown formatting (line length, heading structure, lists, etc.)
+- **frontmatter-schema** — Validates YAML frontmatter against path-aware JSON schemas
+- **pii-lint** — Advisory scan for PII patterns (emails, phones) in markdown
+- **link-check** — Validates relative links point to existing files
 
 ### spec-gate workflow
 
 These checks run when `architecture/specs/**` files change:
 
-- **spec-gate / validate-specs** — Validates spec structure and required fields
+- **validate-specs** — Validates spec structure and required fields
 
 ---
 
@@ -96,7 +96,7 @@ The PII scanner:
 2. **Allowlists known-safe patterns** — e.g., `example.com`, `test@test.com`, YYYY-MM-DD dates.
 3. **Supports line-level suppression** — add `pii:ignore` comment on a line to suppress that finding:
    ```markdown
-   - Contact: [management@town.restaurant](mailto:management@town.restaurant) pii:ignore
+   - Contact: [management@example.com](mailto:management@example.com) pii:ignore
    ```
 
 ### Output
@@ -108,7 +108,7 @@ PII scan output is actionable:
 
 Example:
 ```
-- architecture/specs/spec_001_c_automation_bridge.md:46 [email] management@town.restaurant
+- architecture/specs/spec_001_c_automation_bridge.md:46 [email] management@example.com
 ```
 
 ---
