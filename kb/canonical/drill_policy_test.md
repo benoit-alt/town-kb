@@ -2,7 +2,7 @@
 title: "Drill Policy Test"
 version: "v2026-02-23"
 date: "2026-02-23"
-sensitivity: "confidential"
+sensitivity: "internal"
 pii: false
 status: "draft"
 canonical: false
