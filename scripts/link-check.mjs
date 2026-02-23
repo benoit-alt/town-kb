@@ -34,8 +34,11 @@ async function main() {
   for (const rel of files.sort()) {
     const abs = path.join(repoRoot, rel);
     const raw = await fs.readFile(abs, "utf8");
+    // Strip inline code spans so markdown link examples inside backticks
+    // (e.g. `[text](url)`) are not false-positived as real relative links.
+    const rawStripped = raw.replace(/`[^`\n]+`/g, (s) => "`" + " ".repeat(s.length - 2) + "`");
     let m;
-    while ((m = linkRe.exec(raw)) !== null) {
+    while ((m = linkRe.exec(rawStripped)) !== null) {
       let href = m[1].trim();
       if (!href || href.startsWith("#") || isExternal(href)) continue;
 

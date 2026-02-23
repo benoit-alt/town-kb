@@ -2,10 +2,15 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import process from "node:process";
+import { createRequire } from "node:module";
 import fg from "fast-glob";
 import matter from "gray-matter";
-import Ajv from "ajv";
+import Ajv from "ajv/dist/2020.js";
 import addFormats from "ajv-formats";
+
+// fast-glob v3 removed isMatch; use micromatch (transitive dep) instead.
+const require = createRequire(import.meta.url);
+const micromatch = require("micromatch");
 
 /**
  * Path-aware frontmatter validation.
@@ -22,7 +27,7 @@ const mapPath = path.join(repoRoot, "scripts", "frontmatter-path-map.json");
 const readJson = async (p) => JSON.parse(await fs.readFile(p, "utf8"));
 
 const matchesAny = (filePath, ignoreGlobs) =>
-  fg.isMatch(filePath, ignoreGlobs, { dot: true });
+  micromatch.isMatch(filePath, ignoreGlobs, { dot: true });
 
 const normalize = (p) => p.replaceAll("\\", "/");
 
@@ -67,7 +72,7 @@ async function main() {
     const relNorm = normalize(rel);
     if (matchesAny(relNorm, ignore)) continue;
 
-    const rule = rules.find((r) => fg.isMatch(relNorm, r.glob, { dot: true }));
+    const rule = rules.find((r) => micromatch.isMatch(relNorm, r.glob, { dot: true }));
     if (!rule) continue;
 
     const schemaRel = rule.schema;
