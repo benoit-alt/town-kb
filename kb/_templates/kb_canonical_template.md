@@ -8,10 +8,10 @@ status: "draft"
 canonical: false
 source_attachment_ids:
   - "none"
+next_review_due: "2026-03-22"
 x_author: "TBD"
 x_tags:
   - "template"
-x_review_date: "TBD"
 x_note: "This is a template file; actual KB documents created from this template should set canonical:true"
 ---
 

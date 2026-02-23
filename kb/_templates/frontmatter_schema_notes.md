@@ -8,8 +8,8 @@ status: "active"
 canonical: false
 source_attachment_ids:
   - "none"
+next_review_due: "2027-02-22"
 x_author: "KB Admin Team"
-x_review_date: "2027-02-22"
 x_note: "Reference documentation; canonical:false because it documents schema rather than being governed content"
 ---
 
@@ -66,14 +66,25 @@ source_attachment_ids:
 - **`canonical`** (boolean): `true` for authoritative docs; `false` for drafts/audit/supporting/templates
 - **`source_attachment_ids`** (array): Provenance tracking (filenames or stable IDs)
 
+## Optional Review Fields
+
+Documents may optionally include review scheduling fields:
+
+```yaml
+next_review_due: "YYYY-MM-DD"     # When the document should be reviewed next (canonical scheduling field)
+last_reviewed: "YYYY-MM-DD"       # When the document was last reviewed (read-only indicator)
+```
+
+- Use `next_review_due` as the primary scheduling field for stale-document checks.
+- Set `last_reviewed` only when a document is formally reviewed.
+
 ## Optional Extended Metadata
 
-If you need additional fields (author, tags, review_date, retention_class), **prefix them with `x_`** to avoid conflicts:
+If you need additional fields (author, tags, retention_class), **prefix them with `x_`** to avoid conflicts:
 
 ```yaml
 x_author: "Author Name"
 x_tags: ["tag1", "tag2"]
-x_review_date: "2027-02-22"
 x_retention_class: "corporate_7y_policy"
 x_retention_expiry: "2033-02-22"
 ```
